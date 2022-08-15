@@ -122,6 +122,10 @@ age=22
 prenom="Princesse"
 phrase= "Je m'appele {} et J'ai {} ans ".format(prenom,age)
 print(phrase) # Je m'appele Princesse et J'ai 22 ans 
-
+#-----------------------------------------------------------------------------
+protocole="http://"
+nom_du_site="youtube"
+extension=".com"
 url="{}www.{}.{}".format(protocole,nom_du_site, extension)
-# 3H17
+print(url)
+# L'avantage de rformat par rapport a fstring est qu'on peut definir une variable et l'utiliser plutard ce qui n'est pas le cas de fstring
