@@ -41,5 +41,61 @@ employes.reverse()
 print(employes) #['Alex', 'Patrick', 'Martine', 'Max', 'Carlos'], elle va juste inverser la liste
 #----------------------------------------------------------------------------------------------------
 #Elements pur enlever des elements dans une liste
-# 4h39min 40 SECONDES
+# La methode pop, il supprime par rapport a l'index et nom par rapport au nom de l'element
+# EXEMPLE, on va retirer le dernier element de notre liste
+employes=["Carlos", "Max","Martine","Patrick","Alex"]
+employes.pop(-1)
+print(employes)
+# EXEMPLE 2 , au cas ou on veut recuperer un element supprimer
+employes=["Carlos", "Max","Martine","Patrick","Alex"]
+element=employes.pop(-1)
+print(employes)
+print(element)
+# Methode clear , qui va enlever tout les element de la liste
+employes=["Carlos", "Max","Martine","Patrick","Alex"]
+employes.clear()
+print(employes)
+
+# La methode "join" , qui permet de joindre ensemble differents elements d'une liste, elle s'utilise unique ment sur une chaine de caractères
+# EXEMPLE
+liste= ["python", "est", "un", "langage", "incroyable"]
+resultat = " ".join(liste) 
+print(resultat)
+# EXEMPLE 2
+liste= ["python", "est", "un", "langage", "incroyable"]
+resultat = " - ".join(liste) # on peu egalement definir la ponctuation avec laquelle on veut separer nos chaines de caracteres 
+print(resultat)
+
+# Creer une liste a partir d'une chaine de caractere
+# EXEMPLE
+courses = "Riz, Pommes, Lait, Salade, Saumon, Beurre"
+courses= courses.split() # par defaut la methode split separe par la virgule
+print(courses)
+# exemple 2
+courses = "Riz, Pommes, Lait, Salade, Saumon, Beurre"
+courses= courses.split(", ") # on ajout une virgule et une espace afin d'avoir juste les virgules qui separe chaque chaine de caracters
+print(courses)
+
+# Les operateurs d'appartenance , nous permet de verifier si un element appartient ou non a une structure de données
+#EEMPLE, on verifie si la chaine de carateres Paul est presente dans la liste
+utilisateurs=["Paul", "Pierre", "Marie"]
+"Paul" in utilisateurs # il retourne un boleen
+#EXEMPLE 2
+utilisateurs=["Paul", "Pierre", "Marie"]
+if "Paul" in utilisateurs:
+     utilisateurs.remove("Paul")
+     print(utilisateurs)
+
+# Les listes imbriquées,c'est a dire les listes a l'interieur des listes
+#EXEMPLE, on doit recuperer l'element "java"
+liste=["python",["java","C++", ["C"]], ["ruby"]]
+print(liste[1] [0]) #on extrait premieremnt le bloc ou "java " se trouve avant de le recuperer directement dans sa liste
+# EXEMPLE 2
+liste=["python",["java","C++", ["C"]], ["ruby"]]
+print(liste[0] [0]) # en faisant cela ca donne le premierre lettre du premmeir element de la liste
+
+# pour recuperer un element dans la liste on le faite toujours avec ddes crochets
+#avec remove il faut specifeir l'element qu'on veut supprimer
+# avec pop par contre on supprime un element avec l'indice de cet element dans la liste
+
 
